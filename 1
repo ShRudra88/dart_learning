@@ -39,12 +39,270 @@ void main()
   List <String> student = ['Rudra', 'raj', 'islamul'];
   
   print(student);
+
+
+
+
+  class Car {
+  static int numberOfCars = 0; // static var of car obj
+
+  late String brand;
+  late String model;
+  late int year;
+  double milesDriven = 0;
+
+  Car(this.brand, this.model, this.year) {
+    numberOfCars++;
+  }
+
+  void drive(double miles) {
+    milesDriven += miles;
+  }
+
+  double getMilesDriven() {
+    return milesDriven;
+  }
+
+  String getBrand() {
+    return brand;
+  }
+
+  String getModel() {
+    return model;
+  }
+
+  int getYear() {
+    return year;
+  }
+
+  int getAge(int currentYear) {
+    return currentYear - year;
+  }
+}
+
+void main() {
+  int currentYear = 2023;
+
+  Car car1 = Car("Toyota", "Camry", 2020);
+  Car car2 = Car("Honda", "Civic", 2018);
+  Car car3 = Car("Ford", "F-150", 2015);
+
+  car1.drive(10000);
+  car2.drive(8000);
+  car3.drive(15000);
+
+  List<Car> cars = [car1, car2, car3];
+
+  for (int i = 0; i < cars.length; i++) {
+    Car car = cars[i];
+    print("Car ${i + 1}: ${car.brand} ${car.model} ${car.year} Miles: ${car.milesDriven} Age: ${car.getAge(currentYear)}");
+  }
+
+  print("Total number of cars created: ${Car.numberOfCars}");
+}
+
+/*main()
+{
+  print("Rudra\n");
+}
+// importing dart:io file
+import 'dart:io';
+
+void main()
+{
+	print("Enter your name?");
+	// Reading name of the Geek
+	String? name = stdin.readLineSync(); // null safety in name string
+
+	// Printing the name
+	print("Hello, $name! \nWelcome to GeeksforGeeks!!");
+}
+
+
+// Importing dart:io file
+import 'dart:io';
+
+void main()
+{
+	// Asking for favourite number
+	print("Enter your favourite number:");
+
+// Scanning number
+	int? n = int.parse(stdin.readLineSync()!);
+// Here ? and ! are for null safety
+
+	// Printing that number
+	print("Your favourite number is $n");
+}
+
+
+void main()
+{
+	
+var a1 = num.parse("1");
+var b1 = num.parse("2.34");
+
+var c1 = a1+b1;
+print("Product = ${c1}");
+}
+//Parsing in Dart: The parse() function is used parsing a string containing numeric literal and convert to the number. 
+
+
+void main()
+{
+	List? gfg = List.filled(5, null, growable: false);
+	gfg[0] = 'Geeks';
+	gfg[1] = 'For';
+	gfg[2] = 'Geeks';
+
+	// Printing all the values in List
+	print(gfg);
+
+	// Printing value at specific position
+	print(gfg[2]);
+}
+
+
+
+// OBject & Class in dart
+class rudra{
+  String s1 = '';
+  
+  void rudra1()
+  {
+    print("This is $s1\n");
+  }
+}
+void main()
+{
+  rudra rudraa = new rudra();
+  rudraa.s1 = "Sakhawat Rudra";
+  rudraa.rudra1();
+}
+*/
+
+class GFG {
+
+	String name = " ";
+
+	String get gfg1 {
+		return name;
+	}
+	void set gfg1(String name) {
+		this.name = name;
+	}
+	void result(){
+		print(name);
+	}
+}
+
+void main() {
+GFG gfg2 = new GFG();
+gfg2.name="Geeks for geeks employee no 1 : avinash ,aakanksha";
+gfg2.result();
+}
+
   
   
   
+
+  void main()
+{
   
   
+   /*const int a = 6;
+   const int b = 3;
   
+   print('The Addition of $a and $b is ${a+b}');
   
+   print('The Subtraction of $a and $b is ${a-b}');
+   
+   print('The Multiplication of $a and $b is ${a*b}');
+  
+   print('The Division of $a and $b is ${a/b}');
+  
+   print('The Modulus of $a and $b is ${a%b}');
+   */
+  
+ 
+  List<int> grades = [85, 92, 78, 65, 88, 72];
+
+  double sum = 0;
+  for (int grade in grades) {
+    sum += grade;
+  }
+  double average = sum / grades.length;
+  
+  int roundedAverage = average.round();
+
+  print("Student's average grade: $average");
+  print("Rounded average: $roundedAverage");
+
+  if (roundedAverage >= 70) {
+    print("Passed");
+  } else {
+    print("Failed");
+  }
+
+
+   void main() {
+  
+  // live test on module 1
+  Map<String, dynamic> person = {
+    "PersonID": 2002048,
+    "Name": "Sakhawat",
+    "Age": 22,
+    "Salary": 20000,
+    "Gender": "Male",
+  };
+
+  print("Salary of ${person["Name"]}: ${person["Salary"]}");
+}
+
+
+}
+  
+  class MyClass
+{
+  var myName = "Sakhawat Rudra";
+  add2num(var a, var b)
+  {
+    var c = a+b;
+    print(c);
+  }
+}
+void main()
+{
+   // dart oop // module 3
+  
+   // class, object, inheritance, polymorphism, interfaces, abstrack class
+  var name = new MyClass();
+  print(name.myName);
+  name.add2num(10,20);
+  
+  //A constructor is a different type of function which is created with same name as its class name.
+//The constructor is used to initialize an object when it is created.
+  
+}
+
+void main()
+{
+  
+  // assignment on module 1 -> ostad flutter
+   const int a = 6;
+   const int b = 3;
+  
+   print('The Addition of $a and $b is ${a+b}');
+  
+   print('The Subtraction of $a and $b is ${a-b}');
+   
+   print('The Multiplication of $a and $b is ${a*b}');
+  
+   print('The Division of $a and $b is ${a/b}');
+  
+   print('The Modulus of $a and $b is ${a%b}');
+   
+}
+
    
 }
