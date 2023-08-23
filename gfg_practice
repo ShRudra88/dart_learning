@@ -1,1 +1,174 @@
+/*main()
+{
+  print("Rudra\n");
+}
+// importing dart:io file
+import 'dart:io';
+
+void main()
+{
+	print("Enter your name?");
+	// Reading name of the Geek
+	String? name = stdin.readLineSync(); // null safety in name string
+
+	// Printing the name
+	print("Hello, $name! \nWelcome to GeeksforGeeks!!");
+}
+
+
+// Importing dart:io file
+import 'dart:io';
+
+void main()
+{
+	// Asking for favourite number
+	print("Enter your favourite number:");
+
+// Scanning number
+	int? n = int.parse(stdin.readLineSync()!);
+// Here ? and ! are for null safety
+
+	// Printing that number
+	print("Your favourite number is $n");
+}
+
+
+void main()
+{
+	
+var a1 = num.parse("1");
+var b1 = num.parse("2.34");
+
+var c1 = a1+b1;
+print("Product = ${c1}");
+}
+//Parsing in Dart: The parse() function is used parsing a string containing numeric literal and convert to the number. 
+
+
+void main()
+{
+	List? gfg = List.filled(5, null, growable: false);
+	gfg[0] = 'Geeks';
+	gfg[1] = 'For';
+	gfg[2] = 'Geeks';
+
+	// Printing all the values in List
+	print(gfg);
+
+	// Printing value at specific position
+	print(gfg[2]);
+}
+
+
+
+// OBject & Class in dart
+class rudra{
+  String s1 = '';
+  
+  void rudra1()
+  {
+    print("This is $s1\n");
+  }
+}
+void main()
+{
+  rudra rudraa = new rudra();
+  rudraa.s1 = "Sakhawat Rudra";
+  rudraa.rudra1();
+}
+
+
+class GFG {
+
+	String name = " ";
+
+	String get gfg1 {
+		return name;
+	}
+	void set gfg1(String name) {
+		this.name = name;
+	}
+	void result(){
+		print(name);
+	}
+}
+
+void main() {
+GFG gfg2 = new GFG();
+gfg2.name="Geeks for geeks employee no 1 : avinash ,aakanksha";
+gfg2.result();
+}
+
+
+
+
+
+// dart function
+int add(int a, int b)
+{
+  int ans = a+b;
+  return ans;
+}
+void main()
+{
+  var output = add(10, 20);
+  print(output);
+}
+
+
+
+int fib(int n)
+{
+  return n<2 ? n : (fib(n-1)+fib(n-2));
+}
+void main()
+{
+  var i = 20;
+  print("fibonacci ($i) = ${fib(i)}");
+}
+
+*/
+
+
+
+
+class Student { 
+   String name; 
+   int age; 
+      
+   String get stud_name { 
+      return name; 
+   } 
+      
+   void set stud_name(String name) { 
+      this.name = name; 
+   } 
+     
+   void set stud_age(int age) { 
+      if(age<= 0) { 
+        print("Age should be greater than 5"); 
+      }  else { 
+         this.age = age; 
+      } 
+   } 
+     
+   int get stud_age { 
+      return age;     
+   } 
+}  
+void main() { 
+   Student s1 = new Student(); 
+   s1.stud_name = 'Nitin'; 
+   s1.stud_age = 0; 
+   print(s1.stud_name); 
+   print(s1.stud_age); 
+}
+
+
+
+
+
+
+
+
 
